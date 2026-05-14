@@ -12,8 +12,8 @@ export default function Contact() {
   });
 
   return (
-    <div className="bg-[#09090a]">
-      <PageHero height="40vh" eyebrow="Reach Out" title={<>Let's Talk <em>Roofing</em>.</>} />
+    <div style={{ backgroundColor: '#09090a' }}>
+      <PageHero height="40vh" eyebrow="Reach Out" title={<>Let's Talk <em>Roofing</em>.</>} image="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1920&q=80" />
       
       {/* Emergency Strip */}
       <div className="bg-[#c9a96e] px-4 py-4 text-center border-y border-[#e8c98a]">
