@@ -28,11 +28,14 @@ const navLinks = [
     { name: 'Leander', href: '/service-area/leander' },
     { name: 'Buda', href: '/service-area/buda' },
     { name: 'Bee Cave', href: '/service-area/bee-cave' },
+    { name: 'Pflugerville', href: '/service-area/pflugerville' },
+    { name: 'Dripping Springs', href: '/service-area/dripping-springs' },
   ]},
   { name: 'Residential', href: '/residential' },
   { name: 'Commercial', href: '/commercial' },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export function Nav() {
@@ -41,36 +44,48 @@ export function Nav() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [location.pathname]);
+  useEffect(() => { setMobileOpen(false); }, [location.pathname]);
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 h-[76px] transition-all duration-300 px-6 md:px-12 flex items-center justify-between glass-dark
-        ${scrolled ? 'border-b border-white/5 shadow-2xl' : 'border-b border-transparent'}`}>
-        <Link to="/" className="font-display text-2xl tracking-widest text-[#f3ede0]">
-          WDR<span className="text-[#c9a96e]">.</span>
+      {/* Top bar */}
+      <div className="hidden md:flex bg-[#1e3a5f] text-white text-xs px-6 md:px-12 py-2 items-center justify-between">
+        <span>Austin's Premier Roofing & Water Damage Contractor — Serving Since 2012</span>
+        <div className="flex items-center gap-6">
+          <span>9711 Beck Cir, Austin, TX 78758</span>
+          <a href="tel:5128206505" className="font-bold hover:text-blue-300 flex items-center gap-1"><Phone className="w-3 h-3" /> (512) 820-6505</a>
+        </div>
+      </div>
+
+      <nav className={`sticky top-0 z-50 h-[72px] transition-all duration-300 px-6 md:px-12 flex items-center justify-between bg-white
+        ${scrolled ? 'shadow-md border-b border-gray-200' : 'border-b border-gray-100'}`}>
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <div className="bg-[#1e3a5f] text-white font-bold text-lg px-3 py-1.5 rounded font-display tracking-wide">WDR</div>
+          <div className="hidden sm:block">
+            <div className="text-[#1e3a5f] font-bold text-sm leading-tight">Austin Roofing</div>
+            <div className="text-[#64748b] text-xs leading-tight">& Water Damage</div>
+          </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8 h-full">
+        <div className="hidden lg:flex items-center gap-1 h-full">
           {navLinks.map((item, idx) => (
             <div key={idx} className="relative group h-full flex items-center">
               {item.isDropdown ? (
                 <>
-                  <div className={`h-full flex items-center gap-1 text-[0.78rem] uppercase tracking-wider font-semibold cursor-pointer transition-colors ${location.pathname.startsWith('/' + item.name.toLowerCase().replace(' ', '-')) ? 'text-[#c9a96e]' : 'text-[#f3ede0] hover:text-[#c9a96e]'}`}>
+                  <div className={`h-full flex items-center gap-1 px-3 text-[0.78rem] font-semibold cursor-pointer transition-colors ${location.pathname.startsWith('/' + item.name.toLowerCase().replace(' ', '-')) ? 'text-[#1d4ed8]' : 'text-[#334155] hover:text-[#1d4ed8]'}`}>
                     {item.name} <ChevronDown className="w-3 h-3 opacity-50" />
                   </div>
-                  <div className="absolute top-full left-0 pt-2 lg:pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-150 group-hover:delay-0 z-50">
-                    <div className="glass-dark rounded-2xl p-2 flex flex-col gap-1 shadow-2xl border border-white/10">
+                  <div className="absolute top-full left-0 pt-1 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                       {item.links?.map((link, lidx) => (
-                        <Link key={lidx} to={link.href} className={`text-[0.74rem] uppercase tracking-wider px-4 py-3 rounded-xl transition-colors ${location.pathname === link.href ? 'text-[#c9a96e] bg-[#c9a96e]/10' : 'text-[#f3ede0]/70 hover:text-[#c9a96e] hover:bg-white/5'}`}>
+                        <Link key={lidx} to={link.href} className={`block text-[0.8rem] px-4 py-2.5 transition-colors ${location.pathname === link.href ? 'text-[#1d4ed8] bg-blue-50' : 'text-[#475569] hover:text-[#1d4ed8] hover:bg-blue-50'}`}>
                           {link.name}
                         </Link>
                       ))}
@@ -78,7 +93,7 @@ export function Nav() {
                   </div>
                 </>
               ) : (
-                <Link to={item.href!} className={`h-full flex items-center text-[0.78rem] uppercase tracking-wider font-semibold transition-colors ${location.pathname === item.href ? 'text-[#c9a96e]' : 'text-[#f3ede0] hover:text-[#c9a96e]'}`}>
+                <Link to={item.href!} className={`h-full flex items-center px-3 text-[0.78rem] font-semibold transition-colors ${location.pathname === item.href ? 'text-[#1d4ed8]' : 'text-[#334155] hover:text-[#1d4ed8]'}`}>
                   {item.name}
                 </Link>
               )}
@@ -86,16 +101,15 @@ export function Nav() {
           ))}
         </div>
 
-        {/* Desktop Right */}
-        <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:5128206505" className="text-[0.8rem] text-[#c9a96e] hover:text-[#e8c98a] flex items-center gap-2 font-medium tracking-wide">
-            <Phone className="w-3 h-3" /> (512) 820-6505
+        {/* CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <a href="tel:5128206505" className="btn-gold rounded-md py-2.5 px-5 flex items-center gap-2">
+            <Phone className="w-4 h-4" /> (512) 820-6505
           </a>
-          <Link to="/contact" className="btn-gold rounded-sm px-6 py-3">Free Estimate</Link>
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-[#f3ede0]">
+        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-[#1e3a5f]">
           {mobileOpen ? <X /> : <Menu />}
         </button>
       </nav>
@@ -103,31 +117,30 @@ export function Nav() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-[#09090a] pt-[76px] overflow-y-auto pb-24"
+          <motion.div
+            initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
+            className="fixed inset-0 z-40 bg-white pt-[72px] overflow-y-auto pb-24"
           >
-            <div className="flex flex-col px-6 py-6 gap-6">
+            <div className="flex flex-col px-6 py-6 gap-4">
+              <a href="tel:5128206505" className="btn-gold text-center rounded-lg py-4 text-base flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5" /> Call (512) 820-6505
+              </a>
               {navLinks.map((item, idx) => (
-                <div key={idx} className="border-b border-white/5 pb-6">
+                <div key={idx} className="border-b border-gray-100 pb-4">
                   {item.isDropdown ? (
-                    <div className="flex flex-col gap-4">
-                      <span className="text-[0.8rem] uppercase tracking-wider text-[#c9a96e] font-semibold">{item.name}</span>
-                      <div className="pl-4 flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                      <span className="text-[0.75rem] uppercase tracking-wider text-[#1d4ed8] font-bold">{item.name}</span>
+                      <div className="pl-3 flex flex-col gap-2">
                         {item.links?.map((link, lidx) => (
-                          <Link key={lidx} to={link.href} className="text-[#f3ede0] text-lg font-light">{link.name}</Link>
+                          <Link key={lidx} to={link.href} className="text-[#475569] text-base">{link.name}</Link>
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <Link to={item.href!} className="text-[#f3ede0] text-xl font-light">{item.name}</Link>
+                    <Link to={item.href!} className="text-[#1e3a5f] text-lg font-semibold">{item.name}</Link>
                   )}
                 </div>
               ))}
-              <div className="pt-4 flex flex-col gap-4">
-                <a href="tel:5128206505" className="btn-ghost text-center rounded-lg py-4">Call (512) 820-6505</a>
-                <Link to="/contact" className="btn-gold text-center rounded-lg py-4">Get a Free Estimate</Link>
-              </div>
             </div>
           </motion.div>
         )}

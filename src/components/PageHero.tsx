@@ -15,8 +15,7 @@ export function PageHero({
     <div ref={ref} style={{ height }} className="relative overflow-hidden flex items-center justify-center text-center px-6">
       {image && (
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#09090a]/60 via-[#09090a]/40 to-[#09090a] z-10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,169,110,0.15)_0%,transparent_60%)] z-10 mix-blend-screen" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/75 via-[#1e3a5f]/55 to-[#1e3a5f]/80 z-10" />
           <img src={image} alt="Background" className="w-full h-full object-cover" />
         </motion.div>
       )}
