@@ -224,3 +224,61 @@ body {
   border: 1px solid rgba(255,255,255,0.12) !important;
   box-shadow: 0 4px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08) !important;
 }
+
+/* ── Dark mode ── */
+.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Nav */
+.dark nav {
+  background-color: #0f172a !important;
+  border-bottom-color: #1e293b !important;
+}
+.dark .bg-\[\#1e3a5f\] {
+  background-color: #0f172a !important;
+}
+
+/* Backgrounds */
+.dark .bg-white { background-color: #0f172a !important; }
+.dark .bg-\[\#f8fafc\] { background-color: #1e293b !important; }
+.dark section.bg-white { background-color: #0f172a !important; }
+.dark section.bg-\[\#f8fafc\] { background-color: #1e293b !important; }
+
+/* Text */
+.dark .text-\[\#1e3a5f\] { color: #e2e8f0 !important; }
+.dark .text-\[\#475569\] { color: #94a3b8 !important; }
+.dark .text-\[\#64748b\] { color: #94a3b8 !important; }
+.dark .text-\[\#334155\] { color: #cbd5e1 !important; }
+.dark h1, .dark h2, .dark h3, .dark h4 { color: #f1f5f9; }
+
+/* Cards */
+.dark .glass {
+  background: rgba(30,41,59,0.9) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2) !important;
+}
+
+/* Service cards */
+.dark .bg-blue-50 { background-color: rgba(29,78,216,0.15) !important; }
+.dark .bg-\[\#f8fafc\].border { background-color: rgba(30,41,59,0.8) !important; border-color: rgba(255,255,255,0.06) !important; }
+.dark .border-gray-100 { border-color: rgba(255,255,255,0.06) !important; }
+.dark .border-gray-200 { border-color: rgba(255,255,255,0.1) !important; }
+
+/* Footer stays dark — already is */
+
+/* Mobile menu */
+.dark .fixed.inset-0.bg-white { background-color: #0f172a !important; }
+.dark .text-\[\#475569\] { color: #94a3b8 !important; }
+.dark .text-\[\#1e3a5f\].text-lg { color: #e2e8f0 !important; }
+
+/* Gallery overlay */
+.dark .gallery-item { filter: brightness(0.9); }
+
+/* Input / form */
+.dark input, .dark textarea, .dark select {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
