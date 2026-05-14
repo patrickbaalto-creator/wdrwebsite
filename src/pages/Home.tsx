@@ -42,7 +42,7 @@ export default function Home() {
               <a href="tel:5128206505" className="btn-gold rounded-lg text-base py-4 px-8 flex items-center gap-2">
                 <LucideIcons.Phone className="w-5 h-5" /> Call (512) 820-6505
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-white/10 border-2 border-white/40 text-white text-sm font-bold uppercase tracking-wide py-4 px-8 rounded-lg hover:bg-white/20 transition-colors">
+              <Link to="/contact" className="btn-glass-hero">
                 Free Roof Inspection
               </Link>
             </div>
@@ -52,9 +52,9 @@ export default function Home() {
                 { label: 'Five-Star Reviews', val: '1,382+' },
                 { label: 'Emergency Service', val: '24/7' },
               ].map(s => (
-                <div key={s.label}>
+                <div key={s.label} className="glass-hero-stat px-5 py-3 rounded-xl">
                   <div className="text-3xl font-bold text-white font-display">{s.val}</div>
-                  <div className="text-white/60 text-xs uppercase tracking-wider mt-0.5">{s.label}</div>
+                  <div className="text-white/70 text-xs uppercase tracking-wider mt-0.5">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
               />
             </div>
             {/* ABJ Award Banner */}
-            <div className="mt-6 bg-[#1e3a5f] text-white rounded-xl p-5 flex items-center gap-4">
+            <div className="mt-6 glass-dark-card text-white rounded-xl p-5 flex items-center gap-4">
               <LucideIcons.Award className="w-10 h-10 text-yellow-300 shrink-0" />
               <div>
                 <div className="font-bold text-sm">Austin Business Journal</div>
