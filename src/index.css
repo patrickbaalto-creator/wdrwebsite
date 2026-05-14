@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -282,3 +283,17 @@ body {
   border-color: #334155 !important;
   color: #e2e8f0 !important;
 }
+
+/* Dark mode toggle button — always visible */
+.dark-toggle-btn {
+  color: #1e293b;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+}
+.dark-toggle-btn:hover { background: #e2e8f0; }
+.dark .dark-toggle-btn {
+  color: #f1f5f9;
+  background: rgba(30,41,59,0.8);
+  border-color: rgba(255,255,255,0.2);
+}
+.dark .dark-toggle-btn:hover { background: rgba(51,65,85,0.9); }
