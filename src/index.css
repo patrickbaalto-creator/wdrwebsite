@@ -297,3 +297,24 @@ body {
   border-color: rgba(255,255,255,0.2);
 }
 .dark .dark-toggle-btn:hover { background: rgba(51,65,85,0.9); }
+
+/* Contact page form inputs — dark mode */
+.dark .dark-input,
+.dark input, .dark textarea, .dark select {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+.dark .dark-input::placeholder,
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #64748b !important;
+}
+/* Contact page card in dark mode */
+.dark .bg-white.border.border-gray-200.rounded-3xl {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+.dark .bg-\[\#f8fafc\].border.border-gray-100 {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
