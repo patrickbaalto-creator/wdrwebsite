@@ -121,7 +121,7 @@ export function Nav() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <button onClick={toggle} aria-label="Toggle dark mode" className="w-9 h-9 rounded-lg border border-gray-200 dark:border-gray-600 flex items-center justify-center text-[#1e3a5f] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <button onClick={toggle} aria-label="Toggle dark mode" className="w-9 h-9 rounded-lg border border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
             {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <a href="tel:5128206505" className="btn-gold rounded-md py-2.5 px-5 flex items-center gap-2">
@@ -147,7 +147,7 @@ export function Nav() {
                 <a href="tel:5128206505" className="btn-gold text-center rounded-lg py-4 text-base flex items-center justify-center gap-2 flex-1">
                   <Phone className="w-5 h-5" /> Call (512) 820-6505
                 </a>
-                <button onClick={toggle} aria-label="Toggle dark mode" className="w-14 rounded-lg border border-gray-200 dark:border-gray-600 flex items-center justify-center text-[#1e3a5f] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <button onClick={toggle} aria-label="Toggle dark mode" className="w-14 rounded-lg border border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                   {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
               </div>
