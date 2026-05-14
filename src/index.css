@@ -181,3 +181,46 @@ body {
 .bg-white\/10 { background-color: rgba(30,41,59,0.06) !important; }
 .border-white\/5 { border-color: #e2e8f0 !important; }
 .border-white\/10 { border-color: #e2e8f0 !important; }
+
+/* ── Frosted / liquid glass utilities ── */
+.btn-glass-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.15) !important;
+  border: 2px solid rgba(255,255,255,0.55) !important;
+  color: #ffffff !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0.5rem !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25) !important;
+}
+.btn-glass-hero:hover {
+  background: rgba(255,255,255,0.25) !important;
+  border-color: rgba(255,255,255,0.75) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.35) !important;
+  transform: translateY(-1px) !important;
+}
+
+.glass-hero-stat {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.glass-dark-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(30,58,95,0.75) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+}
