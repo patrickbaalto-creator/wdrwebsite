@@ -323,7 +323,7 @@ export default function Home() {
                 );
               })}
             </div>
-            <a href="https://www.google.com/maps/place/Austin+Roofing+Company+%26+Water+Damage+%7C+WDR/@30.3761739,-97.7127123,894m/" target="_blank" rel="noopener noreferrer" className="btn-gold rounded-lg inline-flex items-center gap-2">
+            <a href="https://www.google.com/maps/place/Austin+Roofing+Company+%26+Water+Damage+%7C+WDR/@30.3761555,-97.7127597,21z/data=!4m6!3m5!1s0x8644cbeec398bf49:0x735fa6fbe3b9bd5f!8m2!3d30.3761739!4d-97.7127123!16s%2Fg%2F11gbk2fppq?entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="btn-gold rounded-lg inline-flex items-center gap-2">
               <LucideIcons.MapPin className="w-4 h-4" /> Get Directions
             </a>
           </FadeUp>
