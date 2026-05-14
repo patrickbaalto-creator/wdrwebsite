@@ -20,8 +20,8 @@ export function Footer() {
             Austin's premier roofing and water damage restoration contractor. GAF Master Elite certified. Serving Central Texas since 2012.
           </p>
           <div className="flex gap-3">
-            <a href="https://www.facebook.com/waterdamageandroofingaustin/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"><Facebook className="w-4 h-4" /></a>
-            <a href="https://twitter.com/wdraustin" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"><Twitter className="w-4 h-4" /></a>
+            <a href="https://www.facebook.com/waterdamageandroofingaustin/" target="_blank" rel="noopener noreferrer" aria-label="WDR on Facebook" className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"><Facebook className="w-4 h-4" /></a>
+            <a href="https://twitter.com/wdraustin" target="_blank" rel="noopener noreferrer" aria-label="WDR on Twitter" className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"><Twitter className="w-4 h-4" /></a>
           </div>
         </div>
 

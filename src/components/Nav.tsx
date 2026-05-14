@@ -97,9 +97,9 @@ export function Nav() {
             <div key={idx} className="relative group h-full flex items-center">
               {item.isDropdown ? (
                 <>
-                  <div className={`h-full flex items-center gap-1 px-3 text-[0.78rem] font-semibold cursor-pointer transition-colors ${location.pathname.startsWith('/' + item.name.toLowerCase().replace(' ', '-')) ? 'text-[#1d4ed8]' : 'text-[#334155] hover:text-[#1d4ed8]'}`}>
+                  <button className={`h-full flex items-center gap-1 px-3 text-[0.78rem] font-semibold cursor-pointer transition-colors ${location.pathname.startsWith('/' + item.name.toLowerCase().replace(' ', '-')) ? 'text-[#1d4ed8]' : 'text-[#334155] hover:text-[#1d4ed8]'}`} aria-haspopup="true">
                     {item.name} <ChevronDown className="w-3 h-3 opacity-50" />
-                  </div>
+                  </button>
                   <div className="absolute top-full left-0 pt-1 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                       {item.links?.map((link, lidx) => (
@@ -121,7 +121,7 @@ export function Nav() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <button onClick={toggle} aria-label="Toggle dark mode" className="dark-toggle-btn w-9 h-9 rounded-lg flex items-center justify-center transition-colors">
+          <button onClick={toggle} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'} className="dark-toggle-btn w-9 h-9 rounded-lg flex items-center justify-center transition-colors">
             {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <a href="tel:5128206505" className="btn-gold rounded-md py-2.5 px-5 flex items-center gap-2">
@@ -130,9 +130,23 @@ export function Nav() {
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-[#1e3a5f]">
-          {mobileOpen ? <X /> : <Menu />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={toggle}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            className="dark-toggle-btn w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+          >
+            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+            className="text-[#1e3a5f]"
+          >
+            {mobileOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -143,14 +157,9 @@ export function Nav() {
             className="fixed inset-0 z-40 bg-white pt-[72px] overflow-y-auto pb-24"
           >
             <div className="flex flex-col px-6 py-6 gap-4">
-              <div className="flex gap-3">
-                <a href="tel:5128206505" className="btn-gold text-center rounded-lg py-4 text-base flex items-center justify-center gap-2 flex-1">
-                  <Phone className="w-5 h-5" /> Call (512) 820-6505
-                </a>
-                <button onClick={toggle} aria-label="Toggle dark mode" className="dark-toggle-btn w-14 rounded-lg flex items-center justify-center transition-colors">
-                  {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                </button>
-              </div>
+              <a href="tel:5128206505" className="btn-gold text-center rounded-lg py-4 text-base flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5" /> Call (512) 820-6505
+              </a>
               {navLinks.map((item, idx) => (
                 <div key={idx} className="border-b border-gray-100 pb-4">
                   {item.isDropdown ? (
