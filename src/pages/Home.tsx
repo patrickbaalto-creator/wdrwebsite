@@ -25,7 +25,8 @@ export default function Home() {
             alt="Roofing professionals at work in Austin TX"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#1e3a5f]/80 sm:bg-gradient-to-r sm:from-[#1e3a5f]/90 sm:via-[#1e3a5f]/70 sm:to-transparent" />
+          <div className="absolute inset-0 bg-[#1e3a5f]/80 lg:bg-none" />
+          <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1e3a5f]/90 via-[#1e3a5f]/70 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20">
           <div className="max-w-2xl">
