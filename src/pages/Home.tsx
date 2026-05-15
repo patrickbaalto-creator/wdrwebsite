@@ -21,7 +21,7 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
+            src="https://cdn-genah.nitrocdn.com/aCeRYObydmPvAkBCsJIPFdlzlxATatuh/assets/images/optimized/rev-f6df6c9/austinroofingandwaterdamage.com/wp-content/uploads/WDR-team.jpg"
             alt="Roofing professionals at work in Austin TX"
             className="w-full h-full object-cover"
           />
