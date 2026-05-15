@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'motion/react';
 function useDarkMode() {
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem('wdr-dark');
-    return saved ? saved === 'true' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return saved === 'true';
   });
   const toggle = () => setDark(d => {
     const next = !d;
@@ -14,8 +14,9 @@ function useDarkMode() {
     document.documentElement.classList.toggle('dark', next);
     return next;
   });
-  // apply on mount
-  useState(() => { document.documentElement.classList.toggle('dark', dark); });
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark);
+  }, []);
   return { dark, toggle };
 }
 
