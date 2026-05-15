@@ -15,10 +15,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Nav />
-      <main className="flex-1 pb-24 md:pb-0">
+      <main className="flex-1">
         {children}
       </main>
       <Footer />
+      {/* Spacer so footer isn't hidden behind fixed mobile bar */}
+      <div className="block md:hidden" style={{height: '5rem'}} aria-hidden="true" />
       <MobileCtaBar />
     </div>
   )
