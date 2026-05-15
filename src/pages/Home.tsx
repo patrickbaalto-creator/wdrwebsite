@@ -26,7 +26,7 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#1e3a5f]/80 lg:bg-none" />
-          <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1e3a5f]/90 via-[#1e3a5f]/70 to-transparent" />
+          <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1e3a5f]/55 via-[#1e3a5f]/30 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20">
           <div className="max-w-2xl">
@@ -80,7 +80,7 @@ export default function Home() {
           <FadeUp>
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1080&q=80"
+                src="https://austinroofingandwaterdamage.com/wp-content/uploads/installing-roof.jpg"
                 alt="WDR roofing crew installing a new roof in Austin Texas"
                 className="w-full h-full object-cover"
               />
@@ -157,22 +157,27 @@ export default function Home() {
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: 'ShieldCheck', title: 'GAF Master Elite Certified', desc: 'Only the top 3% of roofing contractors earn GAF Master Elite status. This means access to the Golden Pledge warranty — up to 50 years of coverage.' },
-              { icon: 'Clock', title: 'Available 24/7', desc: 'Roof emergencies don\'t wait for business hours. Our rapid-response crews are on call around the clock for tarping, emergency repairs, and water extraction.' },
-              { icon: 'FileText', title: 'Insurance Claim Experts', desc: 'We work directly with your insurance adjuster and handle all the paperwork to ensure you get the maximum coverage for storm and hail damage.' },
-              { icon: 'Star', title: '1,382+ Five-Star Reviews', desc: 'Our track record speaks for itself — over 1,382 five-star Google reviews from Austin homeowners and businesses.' },
-              { icon: 'Award', title: 'ABJ Top 50 Company', desc: 'Named to the Austin Business Journal\'s Top 50 Fastest-Growing Companies in Central Texas in both 2020 and 2021.' },
-              { icon: 'Home', title: 'Full-Service Restoration', desc: 'From the first missing shingle to full water damage mitigation — we handle roofing AND interior restoration so you only need one call.' },
+              { icon: 'ShieldCheck', title: 'GAF Master Elite Certified', desc: 'Only the top 3% of roofing contractors earn GAF Master Elite status. This means access to the Golden Pledge warranty — up to 50 years of coverage.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/AustinRoofInstallation2.png' },
+              { icon: 'Clock', title: 'Available 24/7', desc: 'Roof emergencies don\'t wait for business hours. Our rapid-response crews are on call around the clock for tarping, emergency repairs, and water extraction.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/storm-damage-roof-repair-austin-tx.jpg' },
+              { icon: 'FileText', title: 'Insurance Claim Experts', desc: 'We work directly with your insurance adjuster and handle all the paperwork to ensure you get the maximum coverage for storm and hail damage.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/roofing-damage-how-to-file-insurance-claim.jpg' },
+              { icon: 'Star', title: '1,382+ Five-Star Reviews', desc: 'Our track record speaks for itself — over 1,382 five-star Google reviews from Austin homeowners and businesses.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/WDR-team.jpg' },
+              { icon: 'Award', title: 'ABJ Top 50 Company', desc: 'Named to the Austin Business Journal\'s Top 50 Fastest-Growing Companies in Central Texas in both 2020 and 2021.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/ABJ_Fast_50__Austin_companies_with_hyper_revenue_growth_-_Austin_Business_Journal.png' },
+              { icon: 'Home', title: 'Full-Service Restoration', desc: 'From the first missing shingle to full water damage mitigation — we handle roofing AND interior restoration so you only need one call.', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/water-damage.jpg' },
             ].map((item, i) => {
               const Icon = (LucideIcons[item.icon as keyof typeof LucideIcons] as any) || LucideIcons.CheckCircle;
               return (
-                <FadeUp key={i} delay={i * 0.05} className="flex gap-5 p-6 rounded-2xl bg-[#f8fafc] border border-gray-100">
-                  <div className="w-12 h-12 rounded-xl bg-[#1e3a5f] flex items-center justify-center shrink-0">
-                    <Icon className="w-6 h-6 text-white" />
+                <FadeUp key={i} delay={i * 0.05} className="rounded-2xl bg-[#f8fafc] border border-gray-100 overflow-hidden">
+                  <div className="h-40 overflow-hidden">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-[#1e3a5f] mb-2">{item.title}</h3>
-                    <p className="text-[#64748b] text-sm leading-relaxed">{item.desc}</p>
+                  <div className="flex gap-4 p-6">
+                    <div className="w-10 h-10 rounded-xl bg-[#1e3a5f] flex items-center justify-center shrink-0 mt-0.5">
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#1e3a5f] mb-2">{item.title}</h3>
+                      <p className="text-[#64748b] text-sm leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
                 </FadeUp>
               );
@@ -214,29 +219,29 @@ export default function Home() {
           </div>
           <div className="gallery-grid rounded-2xl overflow-hidden">
             <div className="gallery-item gallery-item-large">
-              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80" alt="Premium asphalt shingle roof installation in Round Rock TX by WDR Roofing" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/Round-Rock-shingles-scaled.jpg" alt="Premium asphalt shingle roof installation in Round Rock TX by WDR Roofing" />
               <div className="gallery-overlay"></div>
               <div className="gallery-label">Premium Asphalt Install — Round Rock</div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="Standing seam metal roof on Lake Travis home by WDR" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/metal-roofing-austin-tx.jpg" alt="Standing seam metal roof in Austin TX by WDR" />
               <div className="gallery-overlay"></div>
-              <div className="gallery-label">Standing Seam Metal — Lake Travis</div>
+              <div className="gallery-label">Standing Seam Metal — Austin</div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Tile roof restoration in Cedar Park TX by WDR Roofing" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/done-Lakeline.jpg" alt="Completed roof project at Lakeline by WDR Roofing" />
               <div className="gallery-overlay"></div>
-              <div className="gallery-label">Tile Roof Restoration — Cedar Park</div>
+              <div className="gallery-label">Full Replacement — Lakeline</div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=80" alt="Emergency roof tarping after storm damage in Austin TX" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/storm-damage-roof-repair-austin-tx1-scaled.jpg" alt="Storm damage roof repair in Austin TX by WDR" />
               <div className="gallery-overlay"></div>
-              <div className="gallery-label">Emergency Tarping — Austin</div>
+              <div className="gallery-label">Storm Damage Repair — Austin</div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Commercial TPO flat roof installation in Georgetown TX by WDR" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/commercial-roof-repair-austin-tx.jpg" alt="Commercial roof repair in Austin TX by WDR" />
               <div className="gallery-overlay"></div>
-              <div className="gallery-label">Commercial TPO — Georgetown</div>
+              <div className="gallery-label">Commercial Repair — Austin</div>
             </div>
           </div>
         </div>

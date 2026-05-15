@@ -6,12 +6,12 @@ import * as LucideIcons from 'lucide-react';
 import { useSEO } from '../utils/seo';
 
 const industries = [
-  { label: 'Property Management', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Retail Centers', img: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Industrial Parks', img: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Healthcare', img: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Education', img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Hospitality', img: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Property Management', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/commercial-roof-repair-austin-tx.jpg' },
+  { label: 'Retail Centers', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/roof-repair-austin-tx1.jpg' },
+  { label: 'Industrial Parks', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/18-metal-roof-DJI-scaled.jpg' },
+  { label: 'Healthcare', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/AustinRoofInstallation2.png' },
+  { label: 'Education', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/flat-lock-copper-roof-installation-2.jpg' },
+  { label: 'Hospitality', img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/metal-roof-Georgetown33-scaled.jpg' },
 ];
 
 export default function Commercial() {
@@ -45,10 +45,10 @@ export default function Commercial() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden -mt-8 shadow-lg">
-              <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600&q=80" className="w-full h-full object-cover" alt="TPO Install" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/commercial-roof-repair-austin-tx.jpg" className="w-full h-full object-cover" alt="Commercial Roof Repair Austin TX" />
             </div>
             <div className="aspect-[4/5] rounded-2xl overflow-hidden mt-8 shadow-lg">
-              <img src="https://images.unsplash.com/photo-1587293852726-70cfd4013bcd?auto=format&fit=crop&w=600&q=80" className="w-full h-full object-cover" alt="Commercial Metal" />
+              <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/18-metal-roof-DJI-scaled.jpg" className="w-full h-full object-cover" alt="Metal Roof Aerial Austin TX" />
             </div>
           </div>
         </div>

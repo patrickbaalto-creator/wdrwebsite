@@ -7,9 +7,9 @@ import { services } from '../data/services';
 import { useSEO } from '../utils/seo';
 
 const features = [
-  { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', icon: 'ShieldCheck', title: 'Lifetime Warranties', desc: 'As a Master Elite contractor, we offer the GAF Golden Pledge warranty — up to 50 years of material and workmanship coverage.' },
-  { img: 'https://images.unsplash.com/photo-1560185893-a55b4e1f1f1f?auto=format&fit=crop&w=800&q=80', icon: 'HeartHandshake', title: 'Property Respect', desc: 'We cover your landscaping, protect your siding, and perform multi-pass magnetic sweeps to ensure zero nails left behind.' },
-  { img: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80', icon: 'Home', title: 'Complete Transparency', desc: 'Photo-documented inspections, straightforward pricing, and a dedicated project manager for every home.' },
+  { img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/Round-Rock-shingles-scaled.jpg', icon: 'ShieldCheck', title: 'Lifetime Warranties', desc: 'As a Master Elite contractor, we offer the GAF Golden Pledge warranty — up to 50 years of material and workmanship coverage.' },
+  { img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/roofers-working-with-metal-tile-1-1.jpg', icon: 'HeartHandshake', title: 'Property Respect', desc: 'We cover your landscaping, protect your siding, and perform multi-pass magnetic sweeps to ensure zero nails left behind.' },
+  { img: 'https://austinroofingandwaterdamage.com/wp-content/uploads/roof-repair-austin-tx1.jpg', icon: 'Home', title: 'Complete Transparency', desc: 'Photo-documented inspections, straightforward pricing, and a dedicated project manager for every home.' },
 ];
 
 export default function Residential() {

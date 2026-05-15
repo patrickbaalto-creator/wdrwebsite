@@ -162,7 +162,7 @@ function CityPage({ slug }: { slug: string }) {
         eyebrow={`Roofing Services in ${cityData.city}, TX`}
         title={`${cityData.city}'s Most Trusted Roofer.`}
         subtitle={cityData.description}
-        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
+        image="https://austinroofingandwaterdamage.com/wp-content/uploads/roof-repair-contractor.jpg"
       />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
@@ -191,7 +191,7 @@ function CityPage({ slug }: { slug: string }) {
               <h3 className="font-display text-2xl text-white mb-2">{cityData.localTrust}</h3>
               <p className="text-white/70 text-sm mb-6">Usually within 2 hours response time in {cityData.city}.</p>
               <div className="relative rounded-xl overflow-hidden min-h-[140px] flex flex-col items-center justify-center">
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Austin map" />
+                <img src="https://austinroofingandwaterdamage.com/wp-content/uploads/WDR-team.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="WDR team" />
                 <p className="text-white font-medium mb-3 relative z-10 flex items-center gap-2">
                   <LucideIcons.MapPin className="text-yellow-300" /> Serving {cityData.city}, TX {cityData.zip}
                 </p>
@@ -262,12 +262,12 @@ function RoofTypePage({ slug }: { slug: string }) {
   });
 
   const heroImages: Record<string, string> = {
-    'asphalt-shingles': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80',
-    'metal': 'https://images.unsplash.com/photo-1587293852726-70cfd4013bcd?auto=format&fit=crop&w=1920&q=80',
-    'tile': 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1920&q=80',
-    'flat': 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1920&q=80',
+    'asphalt-shingles': 'https://austinroofingandwaterdamage.com/wp-content/uploads/Round-Rock-shingles-scaled.jpg',
+    'metal': 'https://austinroofingandwaterdamage.com/wp-content/uploads/metal-roofing-austin-tx.jpg',
+    'tile': 'https://austinroofingandwaterdamage.com/wp-content/uploads/Tile-Roofing-Materials-and-Styles.png',
+    'flat': 'https://austinroofingandwaterdamage.com/wp-content/uploads/how-to-repair-a-flat-roof-1.jpg',
   };
-  const heroImg = heroImages[slug] || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80';
+  const heroImg = heroImages[slug] || 'https://austinroofingandwaterdamage.com/wp-content/uploads/WDR-team.jpg';
 
   return (
     <div className="bg-white">
