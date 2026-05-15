@@ -83,12 +83,8 @@ export function Nav() {
       <nav className={`sticky top-0 z-50 h-[72px] transition-all duration-300 px-6 md:px-12 flex items-center justify-between bg-white
         ${scrolled ? 'shadow-md border-b border-gray-200' : 'border-b border-gray-100'}`}>
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="bg-[#1e3a5f] text-white font-bold text-lg px-3 py-1.5 rounded font-display tracking-wide">WDR</div>
-          <div className="hidden sm:block">
-            <div className="text-[#1e3a5f] font-bold text-sm leading-tight">Austin Roofing</div>
-            <div className="text-[#64748b] text-xs leading-tight">& Water Damage</div>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img src="/wdr-logo.png" alt="Austin Roofing Company & Water Damage WDR" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Links */}
